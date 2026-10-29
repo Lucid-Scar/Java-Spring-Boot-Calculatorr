@@ -1,0 +1,148 @@
+/* css lang to prih */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eef2f7;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+}
+
+.calculator {
+    width: 340px;
+    padding: 24px;
+    background: #202938;
+    border-radius: 24px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    color: #f8fafc;
+}
+
+.calculator label {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: -4px;
+    color: #f8fafc;
+}
+
+.calculator form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calculator input,
+.calculator select,
+.calculator button {
+    width: 100%;
+    margin-top: 0;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+input,
+select {
+    background: #354155;
+    color: white;
+}
+
+button {
+    background: #3478f6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2463d5;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #354155;
+    text-align: center;
+    overflow-wrap: anywhere;
+    color: #f8fafc;
+}
+
+.error {
+    color: #ff9b9b;
+    text-align: center;
+    background: #3b2028;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+.calculator {
+    width: 340px;
+}
+
+.display {
+    min-height: 85px;
+    margin-bottom: 18px;
+    padding: 20px 14px;
+    border-radius: 12px;
+    background: #111827;
+    color: #ffffff;
+    font-size: 36px;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.keypad button {
+    min-height: 58px;
+    margin: 0;
+    padding: 10px;
+    background: #354155;
+    color: #ffffff;
+    font-size: 21px;
+    border-radius: 12px;
+}
+
+.keypad button:hover {
+    filter: brightness(1.15);
+}
+
+.keypad .operator {
+    background: #f97316;
+}
+
+.keypad .clear {
+    background: #64748b;
+}
+
+.keypad .equals {
+    grid-column: span 4;
+    background: #3478f6;
+    font-size: 26px;
+}
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium calc sirrr</title>
+</head>
+<body>
+<main class="calculator">
+    <h1>Sirr Premium Calc Sirr</h1>
+    <div class="display" id="display" th:text="${display}">0</div>
+    <p class="error" th:if="${error}" th:text="${error}"></p>
+
+    <div class="keypad">
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="clear">
+            <button type="submit" class="clear">C</button>
+        </form>
+
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="number">
+            <input type="hidden" name="value" value="7">
+            <button type="submit">7</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="number">
+            <input type="hidden" name="value" value="8">
+            <button type="submit">8</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="number">
+            <input type="hidden" name="value" value="9">
+            <button type="submit">9</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="operator">
+            <input type="hidden" name="value" value="+">
+            <button type="submit" class="operator">+</button>
+        </form>
+
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="number">
+            <input type="hidden" name="value" value="4">
+            <button type="submit">4</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="number">
+            <input type="hidden" name="value" value="5">
+            <button type="submit">5</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="number">
+            <input type="hidden" name="value" value="6">
+            <button type="submit">6</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="operator">
+            <input type="hidden" name="value" value="-">
+            <button type="submit" class="operator">-</button>
+        </form>
+
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="number">
+            <input type="hidden" name="value" value="1">
+            <button type="submit">1</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="number">
+            <input type="hidden" name="value" value="2">
+            <button type="submit">2</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="number">
+            <input type="hidden" name="value" value="3">
+            <button type="submit">3</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="operator">
+            <input type="hidden" name="value" value="*">
+            <button type="submit" class="operator">*</button>
+        </form>
+
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="number">
+            <input type="hidden" name="value" value="0">
+            <button type="submit">0</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="decimal">
+            <button type="submit">.</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="operator">
+            <input type="hidden" name="value" value="/">
+            <button type="submit" class="operator">/</button>
+        </form>
+
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="equals">
+            <button type="submit" class="equals">=</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>
