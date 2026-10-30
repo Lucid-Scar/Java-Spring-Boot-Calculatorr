@@ -141,8 +141,15 @@ button:hover {
 }
 
 .keypad .equals {
-    grid-column: span 4;
     background: #3478f6;
     font-size: 26px;
+}
+
+.keypad .wide {
+    grid-column: span 2;
+}
+
+.keypad .function {
+    background: #64748b;
 }
 

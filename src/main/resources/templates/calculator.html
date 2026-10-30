@@ -13,11 +13,26 @@
     <p class="error" th:if="${error}" th:text="${error}"></p>
 
     <div class="keypad">
+        <!-- row 1: C, +/-, %, / -->
         <form action="/calculate" method="post">
             <input type="hidden" name="action" value="clear">
             <button type="submit" class="clear">C</button>
         </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="negate">
+            <button type="submit" class="function">&plusmn;</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="percent">
+            <button type="submit" class="function">%</button>
+        </form>
+        <form action="/calculate" method="post">
+            <input type="hidden" name="action" value="operator">
+            <input type="hidden" name="value" value="/">
+            <button type="submit" class="operator">/</button>
+        </form>
 
+        <!-- row 2: 7 8 9 * -->
         <form action="/calculate" method="post">
             <input type="hidden" name="action" value="number">
             <input type="hidden" name="value" value="7">
@@ -35,10 +50,11 @@
         </form>
         <form action="/calculate" method="post">
             <input type="hidden" name="action" value="operator">
-            <input type="hidden" name="value" value="+">
-            <button type="submit" class="operator">+</button>
+            <input type="hidden" name="value" value="*">
+            <button type="submit" class="operator">*</button>
         </form>
 
+        <!-- row 3: 4 5 6 - -->
         <form action="/calculate" method="post">
             <input type="hidden" name="action" value="number">
             <input type="hidden" name="value" value="4">
@@ -60,6 +76,7 @@
             <button type="submit" class="operator">-</button>
         </form>
 
+        <!-- row 4: 1 2 3 + -->
         <form action="/calculate" method="post">
             <input type="hidden" name="action" value="number">
             <input type="hidden" name="value" value="1">
@@ -77,10 +94,11 @@
         </form>
         <form action="/calculate" method="post">
             <input type="hidden" name="action" value="operator">
-            <input type="hidden" name="value" value="*">
-            <button type="submit" class="operator">*</button>
+            <input type="hidden" name="value" value="+">
+            <button type="submit" class="operator">+</button>
         </form>
 
+        <!-- row 5: 0 . backspace = -->
         <form action="/calculate" method="post">
             <input type="hidden" name="action" value="number">
             <input type="hidden" name="value" value="0">
@@ -91,11 +109,9 @@
             <button type="submit">.</button>
         </form>
         <form action="/calculate" method="post">
-            <input type="hidden" name="action" value="operator">
-            <input type="hidden" name="value" value="/">
-            <button type="submit" class="operator">/</button>
+            <input type="hidden" name="action" value="backspace">
+            <button type="submit" class="function">&#9003;</button>
         </form>
-
         <form action="/calculate" method="post">
             <input type="hidden" name="action" value="equals">
             <button type="submit" class="equals">=</button>
